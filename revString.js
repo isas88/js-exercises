@@ -1,4 +1,4 @@
- let strOrg = 'madam';
+//  let strOrg = 'madam';
 // let revStr = '';
 // console.log('original string :',strOrg);
 
@@ -26,9 +26,9 @@
 // .forEach(element => revStr = element + revStr);
    
 //5 using higher order function reduce
-revStr = strOrg.split('')
-.reduce((revStr, elem) => elem + revStr, '');
-console.log('reverse string :',revStr);
+// revStr = strOrg.split('')
+// .reduce((revStr, elem) => elem + revStr, '');
+// console.log('reverse string :',revStr);
 
 //6 is palindrome
 
@@ -37,11 +37,11 @@ console.log('reverse string :',revStr);
 //     console.log('Is Palindrome');
 // }
 
-// function isPalindrome(strOrg){
-// revStr = strOrg.split('')
-//             .reduce((revStr,elem)=> elem + revStr,'');
-// return strOrg === revStr;
-// }
+function isPalindrome(strOrg){
+const revStr = strOrg.split('')
+            .reduce((revStr,elem)=> elem + revStr,'');
+return strOrg === revStr;
+}
  
 //reverse integer
 // let intOrg = -54321;
@@ -53,4 +53,6 @@ console.log('reverse string :',revStr);
 //                 .join(''))
 //                 * Math.sign(intOrg));
 
-
+module.exports = {
+    isPalindrome
+};

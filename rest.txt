@@ -1,0 +1,61 @@
+
+GET
+<localhost>/users
+
+status: 200
+Response: [{
+    userId: '',
+    name: ''
+},{
+    userId: '',
+    name: ''
+},]
+
+POST
+<localhost>/users
+
+application/json // application/xml, plain/text 
+Request: {
+    name: ''
+}
+
+status: 201
+Response:NA
+
+status: 200
+Response:{
+    userId: '12345',
+    name: ''
+}
+
+GET
+<localhost>/users/12345
+
+application/json
+
+status: 200
+Response:{
+    userId: '',
+    name: ''
+}
+
+PUT
+<localhost>/users/12345
+Request: {
+    name: 'new name'
+}
+
+status: 201
+Response:NA
+
+status: 200
+Response:{
+    userId: '12345',
+    name: 'new name'
+}
+
+DELETE
+<localhost>/users/12345
+
+status: 204
+Response:
