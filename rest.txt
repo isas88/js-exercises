@@ -15,8 +15,11 @@ POST
 <localhost>/users
 
 application/json // application/xml, plain/text 
+content-type: 
+Accept: 
+application/
 Request: {
-    name: ''
+    
 }
 
 status: 201
